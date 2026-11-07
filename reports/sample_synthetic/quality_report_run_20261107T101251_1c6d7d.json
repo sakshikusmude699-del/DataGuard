@@ -1,0 +1,304 @@
+{
+  "run": [
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "start_time": "2026-11-07 10:12:51.055982",
+      "end_time": "2026-11-07 10:12:52.099384",
+      "execution_status": "SUCCESS",
+      "input_count": 35865,
+      "bronze_count": 35865,
+      "silver_count": 30886,
+      "gold_count": 8859,
+      "rejected_count": 4979,
+      "duplicate_count": 1021,
+      "execution_duration": 1.091,
+      "failure_reason": null,
+      "data_source": "synthetic",
+      "reconciliation_status": "PASS"
+    }
+  ],
+  "table_stats": [
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "customers",
+      "source_rows": 9180,
+      "bronze_rows": 9180,
+      "valid_rows": 8820,
+      "rejected_rows": 360,
+      "duplicate_rows": 180
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "orders",
+      "source_rows": 10200,
+      "bronze_rows": 10200,
+      "valid_rows": 8859,
+      "rejected_rows": 1341,
+      "duplicate_rows": 198
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "order_items",
+      "source_rows": 16485,
+      "bronze_rows": 16485,
+      "valid_rows": 13207,
+      "rejected_rows": 3278,
+      "duplicate_rows": 643
+    }
+  ],
+  "quality_scores": [
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "dimension": "completeness",
+      "score": 0.9949951205911055,
+      "rows_evaluated": 143460,
+      "rows_failed": 718
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "dimension": "validity",
+      "score": 0.9935531075556556,
+      "rows_evaluated": 195443,
+      "rows_failed": 1260
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "dimension": "uniqueness",
+      "score": 0.9713708885960239,
+      "rows_evaluated": 35663,
+      "rows_failed": 1021
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "dimension": "referential",
+      "score": 0.9027918306164512,
+      "rows_evaluated": 26685,
+      "rows_failed": 2594
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "dimension": "overall",
+      "score": 0.9656777368398091,
+      "rows_evaluated": 401251,
+      "rows_failed": 5593
+    }
+  ],
+  "rule_results": [
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "order_items",
+      "rule_name": "ORPHAN_ORDER_ID",
+      "dimension": "referential",
+      "rows_evaluated": 16485,
+      "rows_failed": 2175
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "order_items",
+      "rule_name": "DUPLICATE_ORDER_ITEM_KEY",
+      "dimension": "uniqueness",
+      "rows_evaluated": 16485,
+      "rows_failed": 643
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "orders",
+      "rule_name": "ORPHAN_CUSTOMER_ID",
+      "dimension": "referential",
+      "rows_evaluated": 10200,
+      "rows_failed": 419
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "order_items",
+      "rule_name": "NEGATIVE_PRICE",
+      "dimension": "validity",
+      "rows_evaluated": 16485,
+      "rows_failed": 332
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "order_items",
+      "rule_name": "MISSING_SELLER_ID",
+      "dimension": "completeness",
+      "rows_evaluated": 16485,
+      "rows_failed": 331
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "order_items",
+      "rule_name": "NEGATIVE_FREIGHT_VALUE",
+      "dimension": "validity",
+      "rows_evaluated": 16485,
+      "rows_failed": 328
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "orders",
+      "rule_name": "INVALID_TIMESTAMP_ORDER_PURCHASE_TIMESTAMP",
+      "dimension": "validity",
+      "rows_evaluated": 10200,
+      "rows_failed": 205
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "orders",
+      "rule_name": "MISSING_ORDER_ID",
+      "dimension": "completeness",
+      "rows_evaluated": 10200,
+      "rows_failed": 202
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "orders",
+      "rule_name": "INVALID_ORDER_STATUS",
+      "dimension": "validity",
+      "rows_evaluated": 10200,
+      "rows_failed": 198
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "orders",
+      "rule_name": "DUPLICATE_ORDER_ID",
+      "dimension": "uniqueness",
+      "rows_evaluated": 9998,
+      "rows_failed": 198
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "orders",
+      "rule_name": "DELIVERED_BEFORE_PURCHASE",
+      "dimension": "validity",
+      "rows_evaluated": 9299,
+      "rows_failed": 197
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "customers",
+      "rule_name": "MISSING_CUSTOMER_STATE",
+      "dimension": "completeness",
+      "rows_evaluated": 9180,
+      "rows_failed": 185
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "customers",
+      "rule_name": "DUPLICATE_CUSTOMER_ID",
+      "dimension": "uniqueness",
+      "rows_evaluated": 9180,
+      "rows_failed": 180
+    }
+  ],
+  "schema_checks": [
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "customers",
+      "status": "PASS",
+      "missing_columns": "",
+      "unexpected_columns": "",
+      "checked_at": "2026-11-07 10:12:51.058580"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "orders",
+      "status": "PASS",
+      "missing_columns": "",
+      "unexpected_columns": "",
+      "checked_at": "2026-11-07 10:12:51.058580"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "table_name": "order_items",
+      "status": "PASS",
+      "missing_columns": "",
+      "unexpected_columns": "",
+      "checked_at": "2026-11-07 10:12:51.058580"
+    }
+  ],
+  "reconciliation": [
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "customers: source rows == bronze rows",
+      "expected": "9180",
+      "actual": "9180",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "customers: bronze rows == silver-valid + rejected",
+      "expected": "9180",
+      "actual": "9180",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "orders: source rows == bronze rows",
+      "expected": "10200",
+      "actual": "10200",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "orders: bronze rows == silver-valid + rejected",
+      "expected": "10200",
+      "actual": "10200",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "order_items: source rows == bronze rows",
+      "expected": "16485",
+      "actual": "16485",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "order_items: bronze rows == silver-valid + rejected",
+      "expected": "16485",
+      "actual": "16485",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "silver.orders == gold.fact_orders (rows)",
+      "expected": "8859",
+      "actual": "8859",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "silver items price == gold items_revenue",
+      "expected": "1185670.56",
+      "actual": "1185670.56",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "silver items freight == gold freight_total",
+      "expected": "209557.40",
+      "actual": "209557.40",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "gold.sales_summary orders == fact_orders rows",
+      "expected": "8859",
+      "actual": "8859",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "gold.dim_customers order_count == fact_orders rows",
+      "expected": "8859",
+      "actual": "8859",
+      "status": "PASS"
+    },
+    {
+      "run_id": "run_20261107T101251_1c6d7d",
+      "check_name": "silver order items with no silver order (orphans)",
+      "expected": "0",
+      "actual": "0",
+      "status": "PASS"
+    }
+  ]
+}

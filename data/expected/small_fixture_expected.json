@@ -1,0 +1,15 @@
+{
+  "_comment": "Hand-computed expected results for tests/conftest.py::build_small_dataset. Kept apart from the input CSV builders.",
+  "source_rows": {"customers": 5, "orders": 8, "order_items": 8},
+  "valid_rows": {"customers": 3, "orders": 3, "order_items": 4},
+  "rejected_rows": {"customers": 2, "orders": 5, "order_items": 4},
+  "gold": {"fact_orders_rows": 3, "items_revenue": "380.00", "freight_total": "38.00", "order_value": "418.00",
+           "o1_order_value": "165.00", "dim_customers_rows": 2, "repeat_customers": 1,
+           "delivered_orders": 2, "late_orders": 1, "late_delivery_pct": 50.0, "avg_delivery_days": 17.0},
+  "rejection_reasons": {
+    "customers": {"MALFORMED_CUSTOMER_STATE": 1, "DUPLICATE_CUSTOMER_ID": 1},
+    "orders": {"ORPHAN_CUSTOMER_ID": 1, "INVALID_ORDER_STATUS": 1, "DELIVERED_BEFORE_PURCHASE": 1,
+               "DUPLICATE_ORDER_ID": 1, "DELIVERED_STATUS_MISSING_DELIVERY_DATE": 1},
+    "order_items": {"DUPLICATE_ORDER_ITEM_KEY": 1, "ORPHAN_ORDER_ID": 1, "NEGATIVE_PRICE": 1, "MISSING_SELLER_ID": 1}
+  }
+}

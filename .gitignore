@@ -1,0 +1,27 @@
+# raw & generated data (never commit Kaggle data: CC BY-NC-SA 4.0, and it is large)
+data/raw/*
+!data/raw/.gitkeep
+data/synthetic/*
+!data/synthetic/.gitkeep
+# databases
+database/*
+!database/.gitkeep
+*.duckdb
+*.duckdb.wal
+# runtime output
+logs/*
+!logs/.gitkeep
+reports/parquet/
+reports/quality_report_run_*
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+# secrets & OS
+.env
+kaggle.json
+.DS_Store
